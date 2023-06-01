@@ -1,16 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto:400,500&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto:400,500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css" />
     <script src="js/jquery-3.6.1.js"></script>
     <title>Trump Card Trivia</title>
- </head>
-</html> 
+</head>
+
+<body>
+    <a class="anch" id="menu"></a>
+    <header>
+        <div class="menu-wrap">
+            <div class="close-menu">&#10005;</div>
+            <ul class="trivia-list">
+                <li>
+                    <a id="soccerBtn" data-trivia="soccer" href="#trivia">Soccer Trivia</a>
+                </li>
+                <li>
+                    <a id="animeBtn" data-trivia="anime" href="#trivia">Anime Trivia</a>
+                </li>
+                <li>
+                    <a id="trumpBtn" data-trivia="trump" href="#trivia">Did Trump Tweet This?</a>
+                </li>
+            </ul>
+        </div>
+        <h1>Trump Card<br />Trivia</h1>
+        <nav>
+            <a class="start-button" href="#">Start Trivia</a>
+            <a href="#scores">High Scores</a>
+        </nav>
+    </header>
+    <main>
+        <a class="anch" id="trivia"></a>
+        <div class="popup-bg">
+            <div class="popup-content popup-end">
+                <img class="cup" src="img/trophy-worldcup.png" alt="" />
+                <form class="congrats">
+                    <div class="close">&#10005;</div>
+                    <p>Congratulations, new high score!</p>
+                    <input class="name-input" type="text" placeholder="Enter your name." />
+                    <button class="submit-score">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="restart-bg">
+            <div class="restart-content">
+                <div class="restart-prompt">Would you like to try again?</div>
+                <button class="restart">Yes</button>
+                <button class="no-restart">No</button>
+            </div>
+        </div>
+
+        <div class="popup-question-bg">
+            <div class="popup-question-content">
+                <p class="result">Incorrect</p>
+                <button class="acknowledge">I'm sorry.</button>
+            </div>
+        </div>
+        <div class="page-header">
+            <input class="menu-btn" type="checkbox" id="trivia-menu-btn" />
+            <label for="trivia-menu-btn" class="menu-icon"><span class="nav-icon"></span></label>
+            <div class="trivia-nav mini-nav">
+                <a href="#menu">Main Menu</a>
+                <a href="#trivia">Trivia</a>
+                <a href="#scores">High Scores</a>
+            </div>
+        </div>
+        <div class="top">
+            <div class="overlay">
+                <div class="question-number"></div>
+                <div class="scoreboard"></div>
+            </div>
+            <div class="question">Go ahead and select the trivia in the main menu.</div>
+            <div class="question-image-container"></div>
+        </div>
+
+        <div class="bottom"></div>
+    </main>
+
+    <section class="scores">
+        <a class="anch" id="scores"></a>
+
+        <div class="page-header">
+            <input class="menu-btn" type="checkbox" id="scores-menu-btn" />
+            <label for="scores-menu-btn" class="menu-icon"><span class="nav-icon"></span></label>
+            <div class="scores-nav mini-nav">
+                <a href="#menu">Main Menu</a>
+                <a href="#trivia">Trivia</a>
+                <a href="#scores">High Scores</a>
+            </div>
+        </div>
+        <h2>High scores</h2>
+        <button class="clear-scores">Clear Scores</button>
+        <table class="score-list">
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Score</th>
+                <th>Date</th>
+            </tr>
+        </table>
+    </section>
+
+    <script src="js/dom-elements.js"></script>
+    <script src="js/trivia.js"></script>
+    <script src="js/question.js"></script>
+    <script src="js/soccer.js"></script>
+    <script src="js/trump.js"></script>
+    <script src="js/anime.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
