@@ -20,6 +20,7 @@ button {
 
 a {
     color: inherit;
+    text-decoration: none;
 }
 
 .anch {
@@ -34,7 +35,7 @@ main,
 }
 
 header {
-    background: radial-gradient(circle, rgba(69, 162, 158, 1) 0%, rgba(34, 75, 73, 1) 100%);
+    background: radial-gradient(circle, rgb(255, 247, 0) 0%,orange 50%);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -43,11 +44,11 @@ header {
 }
 
 .menu-wrap {
-    background: rgba(35, 108, 109, 0.7);
+    background: radial-gradient(circle, orange 0%,rgb(255, 247, 0) 100%);
     position: fixed;
     z-index: 2;
-    height: 135%;
-    width: 135%;
+    height: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,36 +86,44 @@ header {
 }
 
 h1 {
-    font-family: 'Montserrat', sans-serif;
-    color: #1f2833;
-    font-size: 5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 8rem;
     margin: 20px auto 0 auto;
     text-align: center;
 }
+#h1_span{
+    margin-left: 9rem;
+    font-size: 5rem;
+    color: red;
+}
 
 nav {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-top: 50px;
+    font-weight: bold;
 }
 
 nav a {
     margin: 0 20px;
     padding: 15px;
-    background: #1f2833;
-    color: #45a29e;
-    border: 2px solid #1f2833;
+    background: white;
+    color: orange;
+    border: 2px solid white;
     transition: all 0.4s;
 }
 
 nav a:hover {
-    color: #1f2833;
-    background: #45a29e;
+    color: whitesmoke;
+    background: orangered;
 }
 
 main {
-    background: radial-gradient(circle, rgba(53, 69, 89, 1) 0%, rgba(31, 40, 51, 1) 100%);
+    background: radial-gradient(circle, rgb(255, 247, 0) 0%,orange 50%);
     min-height: 100vh;
-    color: #c5c6c7;
+    color: white;
+    font-weight: bold;
     align-items: center;
     padding-top: 20px;
 }
@@ -143,7 +152,7 @@ main {
 
 .popup-content,
 .popup-question-content {
-    background: #45a29e;
+    background: rgb(191, 191, 8);
     width: 500px;
     height: 500px;
     border-radius: 5px;
@@ -161,7 +170,7 @@ main {
 }
 
 .close {
-    color: #1f2833;
+    color: white;
     position: absolute;
     top: 14px;
     right: 14px;
@@ -200,13 +209,13 @@ main {
     display: block;
     margin: 15px auto;
     padding: 5px;
-    color: #c5c6c7;
-    background: #2e7b77;
+    color: black;
+    background: white;
     border: 2px solid #1f2833;
 }
 
 .name-input::placeholder {
-    color: #45a29e;
+    color: #c5c6c7;
 }
 
 .submit-score,
@@ -214,12 +223,13 @@ main {
 .restart,
 .no-restart {
     padding: 5px;
-    background: #2e7b77;
-    color: #c5c6c7;
-    border: 2px solid #1f2833;
+    background: white;
+    color: orange;
+    border: none;
     width: 90px;
     height: 40px;
     font-size: 1.3rem;
+    font-weight: bold;
     cursor: pointer;
     transition: all 0.3s;
 }
@@ -228,7 +238,7 @@ main {
 .acknowledge:hover,
 .restart:hover,
 .no-restart:hover {
-    background: #45a29e;
+    background: orangered;
 }
 
 .acknowledge {
@@ -257,7 +267,7 @@ main {
 }
 
 .restart-content {
-    background: #45a29e;
+    background: rgb(191, 191, 8);
     width: 500px;
     height: 300px;
     border-radius: 5px;
@@ -285,8 +295,8 @@ main {
 
 .restart:hover,
 .no-restart:hover {
-    color: #45a29e;
-    background: #1f2833;
+    color: white;
+    background: orangered;
 }
 
 .overlay {
@@ -336,7 +346,7 @@ main {
 }
 
 .choice:hover {
-    background: #2e7b77;
+    background: orangered;
 }
 
 .small-img:hover {
@@ -361,7 +371,7 @@ main {
 }
 
 .scores {
-    background: radial-gradient(circle, rgba(69, 162, 158, 1) 0%, rgba(56, 122, 119, 1) 100%);
+    background: radial-gradient(circle, rgb(255, 247, 0) 0%,orange 20%);
     min-height: 100vh;
     padding: 20px 0 0 30px;
     display: grid;
@@ -402,15 +412,16 @@ td {
     padding: 10px;
     text-align: center;
     color: #1f2833;
+    font-weight: bold;
 }
 
 .clear-scores {
     grid-area: clear;
-    color: #c5c6c7;
+    color: white;
     background: #1f2833;
     font-size: 1.5rem;
+    font-weight: bold;
     text-align: center;
-    border: 2px solid #1f2833;
     cursor: pointer;
     margin: 30px auto;
     height: 50px;
@@ -419,7 +430,8 @@ td {
 }
 
 .clear-scores:hover {
-    background: #2e7b77;
+    border: 2px solid white;
+    background: orangered;
 }
 
 footer {
@@ -444,18 +456,19 @@ footer {
 }
 
 .trivia-nav {
-    color: #45a29e;
+    color: orange;
 }
 
 .trivia-nav a {
-    border-color: #c5c6c7;
+    border-color: white;
     transition: all 0.4s;
-    color: #c5c6c7;
+    color: rgb(224, 149, 10);
+    font-weight: bold;
 }
 
 .trivia-nav a:hover {
-    color: #1f2833;
-    background: #c5c6c7;
+    color: white;
+    background: orangered;
 }
 
 .page-header {
@@ -468,9 +481,16 @@ footer {
 }
 
 .scores-nav a:hover {
-    background: #1f2833;
-    color: #45a29e;
+    background: orangered;
+    color: white;
 }
+
+#h2{
+    color: white;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 
 @media (max-width: 700px) {
     h1 {
